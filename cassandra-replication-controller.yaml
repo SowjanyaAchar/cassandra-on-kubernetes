@@ -32,6 +32,12 @@ spec:
           ports:
             - containerPort: 9042
               name: cql
+          resources:
+            limits:
+              memory: "1000Mi"
+            requests:
+              memory: "100Mi"
+              cpu: 100m
           volumeMounts:
             - mountPath: /var/lib/cassandra/data
               name: data
