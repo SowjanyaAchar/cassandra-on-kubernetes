@@ -8,6 +8,11 @@ spec:
   ports:
     - port: 9042
       name: cql
+  resources:
+      limits:
+        memory: "400Mi"
+      requests:
+        memory: "200Mi"
   selector:
     name: cassandra
 
